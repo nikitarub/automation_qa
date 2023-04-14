@@ -12,7 +12,7 @@ class Fs():
     def cd(path):
         # проверка на существование пути
         log.info(f"Changing path to: {path}")
-        if not os.path.isdir(path):
+        if not explain(what_to_return=True)(os.path.isdir)(path):
             log.error(f"Such path: {path} does not exist")
             raise FileNotFoundError(path)
         # переход в папку
