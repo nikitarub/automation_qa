@@ -25,7 +25,7 @@ def work_webhook(background_tasks: BackgroundTasks):
     time.sleep(1)    
     log.info("Done with github webhook POST request")
     options = {}
-    options['branch'] = "master"
+    options['branch'] = "main"
     options['version'] = "patch"
     config = config_switch("target")
     Scenario("release_backend", options, config)
