@@ -32,4 +32,4 @@ class Fs():
 
     @staticmethod
     def exists(path):
-        return explain("Checking if {path} exists", what_to_return=False)(os.path.exists)(path)
+        return explain(f"Checking if {path} exists", what_to_return=False)(os.path.exists)(path)

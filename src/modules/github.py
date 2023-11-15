@@ -20,7 +20,7 @@ class Github(BaseModule):
 
     @staticmethod
     def clone(options, config):
-        url = f"git@github.com:{config.github.github_url_path}"
+        url = f'https://{ config.github.pat_token }@github.com/{config.github.github_url_path}'
         clone_path = config.github.clone_path
         log.info(f"Cloning repository of {url} to {clone_path}")
         if Fs.exists(clone_path):

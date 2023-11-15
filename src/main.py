@@ -1,3 +1,8 @@
+from dotenv import load_dotenv
+# Для примера .env.secrets файл должен лежать рядом с main.py 
+env_path = str(__file__).rsplit('/',1)[0] + "/.env.secrets"
+load_dotenv(dotenv_path=env_path)
+
 import argparse
 from common import log
 from common.explain import set_explain_mode

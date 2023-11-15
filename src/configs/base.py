@@ -5,6 +5,7 @@ from typing import Optional
 class BaseGitHubConfig(BaseModel):
     github_url_path: str
     clone_path: str
+    pat_token: str
 
     @validator('github_url_path')
     def github_url_path__must_end_with_dot_git(cls, v):
